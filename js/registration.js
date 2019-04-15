@@ -77,7 +77,7 @@ function getExitButton(login) {
                 <h4 class="text-light mt-3 mr-4">Добро пожаловать, <strong>' + login + '</strong></h4> \
             </div>  \
             <div> \
-                <a href="http://localhost/Competition/script/content.html" onclick="delete_token()" class="brand"> \
+                <a href="https://photohub2019.ru" onclick="delete_token()" class="brand"> \
                     <h5 class="text-light mr-3 mt-2">Выход</h5> \
                     <img src="img/icons/white_exit.png" alt="" width="30" height="32"> \
                 </a> \
