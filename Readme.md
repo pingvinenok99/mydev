@@ -1,7 +1,7 @@
 ﻿# Фотогалерея
 
 1. Ссылка на проект: [photohub2019.ru](https://www.photohub2019.ru)
-2. [Ссылка на репозиторий](https://github.com/pingvinenok99)
+2. [Ссылка на репозиторий](https://github.com/pingvinenok99/photogallery)
 3. **Особенности**:
 	- Сайт написан с помощью фреймворка [metro 4](https://metroui.org.ua/)
 	- "Просмотр изображений" сделан с помощью JS библиотеки `lightview`
