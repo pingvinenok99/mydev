@@ -1,0 +1,12 @@
+body, html {
+   height: 100%;
+  }
+
+.opacity_collapse {
+  background-color:  rgb(0, 94, 93, 0.9);
+}
+
+.upper {
+  z-index: 99999;
+}
+

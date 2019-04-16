@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Фотогалерея</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/metro-all.css">
+    <link rel="stylesheet" href="css/metro-rtl.css">
+    <link rel="stylesheet" href="css/metro-icons.css">
+    <link rel="stylesheet" href="css/datatables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/show_tags.css">
+    <link rel="stylesheet" href="css/lightview.css"/>
+  </head>
+   
+  <body>
+    <!-- Меню -->
+    <div data-role="appbar" class="bg-darkTeal fg-white d-flex flex-justify-between">
+        <div class="d-flex flex-row">
+            <div class="ml-4 mt-1 mr-4" ><img src="img/icons/white_album_icons.png" alt=""></div>
+            <div><h4 class="text-light ml-1 mt-1">Фотогалерея</h4></a></div>
+        </div>
+        <div class="d-flex flex-row welcome_cell">
+        <!-- Авторизированный пользователь -->
+         
+        <!-- Поле авторизации -->
+            <button class="brand" id="collapse_toggle_2" onclick="showWinAuthorization()" ><h5 class="text-light mt-2 mr-4">Авторизация</h5><img src="img/icons/white_enter.png" alt="" width="28" height="30"></button>
+             
+        </div>
+    </div>
+
+    <!-- Контент для авторизации -->
+    <div class="pos-relative mt-13 pb-4 upper">
+        <div class="opacity_collapse fg-white mt-13 pt-3 pb-3 pos-fixed pos-top-center container-fluid" data-role="collapse"
+            data-toggle-element="#collapse_toggle_2" data-collapsed="true">
+            <div id="registration"></div>
+        </div>
+    </div>
+    
+    <h3 class="text-center text-light">Знаменитости</h3>
+    
+    <div class="d-flex flex-justify-center flex-wrap mb-3">
+
+        <!-- Сортировка по рейтингу -->
+        <button class="button m-1 mt-4" onclick="sortList('painting-avg_rating','desc')"><span class="pr-1">Рейтинг</span></span><img src="img/icons/up.png" alt="" width="18"></button>
+        <button class="button m-1 mt-4" onclick="sortList('painting-avg_rating','asc')"><span class="pr-1">Рейтинг</span><img src="img/icons/down.png" alt="" width="18"></button>
+        <button class="button m-1 mt-4" onclick="sortList('painting-name','desc')"><span class="pr-1">Название</span></span><img src="img/icons/up.png" alt="" width="18"></button>
+        <button class="button m-1 mt-4" onclick="sortList('painting-name','asc')"><span class="pr-1">Название</span><img src="img/icons/down.png" alt="" width="18"></button>
+        
+        <div class="cell-md-4 search_tag">
+            <input type="text" data-role="taginput" data-on-tag-add="$('.images').data('list').draw();" class="mt-4">
+            <span class="text-center text-light"><small>Поиск по тегам</small></span>
+        </div>
+    </div>
+    
+    <!-- Удалить img_box у li-->
+    <ul class="images ml-5 mr-5"
+        data-role="list"
+        
+        data-sort-class="painting-avg_rating"
+        data-filter-class="painting-avg_rating"
+        data-sort-dir="desc"
+        data-cls-list="unstyled-list row flex-justify-center"
+        data-cls-list-item="cell-sm-6 cell-md-4"
+
+        data-source="data/info.json"
+
+        data-show-pagination="true"
+        data-items="10"
+        data-items-steps="all,10,20,50"
+        data-show-items-steps="true"
+        data-show-list-info="true"
+        data-filter="tagFilter"
+    >
+    </ul>
+    <!-- Подвал -->
+    <footer class="container-fluid bg-grayWhite p-4">
+        <div class="row">
+            <div class="cell-md-6">
+                <ul class="inline-list h-menu no-hover bg-grayWhite" style="margin-left: -.5rem">
+                    <li><a href="https://github.com/pingvinenok99">Github</a></li>
+                </ul>
+                <p>
+                    Metro 4 &copy; 2019 by <a href="mailto:example@pimenov.com.ua" class="no-wrap">Max</a>.
+                <br />
+                    Made for <strong>Tula Web Cup 2019</strong>
+                </p>
+            </div>
+            <div class="cell-md-6">
+                <!-- ads-html -->
+            </div>
+        </div>
+    </footer>
+    <!-- Используемые скрипты -->
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/cookie.js"></script>
+    <script type="text/javascript" src="js/lightview/swfobject.js"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/excanvas/excanvas.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/spinners/spinners.min.js"></script>
+    <script type="text/javascript" src="js/lightview/lightview.js"></script>
+    <script type="text/javascript" src="js/registration.js"></script>
+    <script type="text/javascript" src="js/metro.js"></script>
+    
+  </body>
+</html>
